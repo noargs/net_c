@@ -48,7 +48,14 @@ int main() {
      */
     struct addrinfo hints;
     memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_INET;         // IPv4, for IPv6 use AF_INET6
+
+    /**
+     * IPv4, for IPv6 use AF_INET6
+     * if AF_INET6 was chosen then 
+     * use http://[::1]:8080 instead of
+     * http://127.0.0.1:8080
+     */
+    hints.ai_family = AF_INET;        
     hints.ai_socktype = SOCK_STREAM;   // for TCP, for UDP use "SOCK_DGRAM"
     hints.ai_flags = AI_PASSIVE;       // bind to wildcard address i.e. listen to any avaiblable network
 
