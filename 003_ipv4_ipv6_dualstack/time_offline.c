@@ -1,3 +1,10 @@
+/**
+ * this console application which print
+ * local time is then converted into socket
+ * ipv4 (time_server.c), ipv6 (time_server.c)
+ * dual stack (i.e. ipv4 and ipv6 time_server_dual_stack.c)
+ * applicaion 
+ */
 #include <stdio.h>
 #include <time.h>
 
